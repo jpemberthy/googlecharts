@@ -399,7 +399,7 @@ class Gchart
   # or
   # Gchart.line(:legend => ['first label', 'last label'])
   def set_legend
-    return set_labels if type.to_s =~ /pie|pie_3d|meter/
+    # return set_labels if type.to_s =~ /pie|pie_3d|meter/
 
     if legend.is_a?(Array)
       "chdl=#{@legend.map{|label| "#{CGI::escape(label.to_s)}"}.join('|')}"
